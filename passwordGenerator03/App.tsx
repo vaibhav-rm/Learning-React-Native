@@ -104,7 +104,7 @@ const App = () => {
                 )}
                 </View>
                 <TextInput 
-                style={styles.inputStyle}
+                style={[styles.inputStyle,styles.inputColor]}
                 value={values.passwordLength}
                 onChangeText={handleChange('passwordLength')}
                 placeholder="Ex: 8"
@@ -193,6 +193,9 @@ const App = () => {
 }
 
 const styles = StyleSheet.create({
+  inputColor: {
+      color: '#ffffff',
+  },
   body: {
     backgroundColor: '#000000'
   },
@@ -213,7 +216,6 @@ const styles = StyleSheet.create({
     fontSize: 26,
     fontWeight: '600',
     marginBottom: 2,
-    color: '#ffffff'
   },
   description: {
     color: '#758283',
@@ -238,6 +240,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: 4,
     borderColor: '#16213e',
+    color: '#fff'
   },
   errorText: {
     fontSize: 12,
